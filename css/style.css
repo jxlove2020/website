@@ -27,7 +27,7 @@
 #header {
   width: 100%;
   height: 325px;
-  background: #ccc;
+  background: url(../img/header_bg.png) center top repeat-x;
 }
 #contents {
   width: 100%;
@@ -67,5 +67,43 @@
   width: 990px;
   margin: 0 auto;
   height: inherit;
-  background: rgba(255, 255, 255, 0.3);
+  /* background: rgba(255, 255, 255, 0.3); */
+}
+
+/* 헤더 */
+.header {
+}
+.header .header-menu {
+  text-align: right;
+}
+.header .header-menu a {
+  color: #fff;
+  padding: 10px;
+  display: inline-block;
+}
+.header .header-menu a:hover {
+  color: #555;
+}
+.header .header-tit {
+  text-align: center;
+}
+.header .header-tit h1 {
+  background-color: #4aa8d4;
+  text-align: center;
+  font-size: 28px;
+  padding: 5px 20px 6px 20px;
+  display: inline-block;
+  color: #fff;
+  margin-top: 40px;
+  font-weight: normal;
+  text-transform: uppercase;
+}
+.header .header-tit a {
+  display: inline-block;
+  background-color: #2698cb;
+  font-size: 18px;
+  color: #fff;
+  padding: 5px 20px 6px 20px;
+}
+.header .header-icon {
 }
