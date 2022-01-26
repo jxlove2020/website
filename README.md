@@ -13,3 +13,10 @@
 2. background 속성으로 표현 ( 의미가 없을 때 ) - 대체 문자 X
 3. 이미지를 background 속성 - 웹 표준 준수하기 위해서는 가상으로 대체 문자를 만들어 줌 ( IR 효과 )
    이미지 스프라이트 효과
+
+# float: left 로 인한 영역 깨짐 방지법
+
+1. 깨지는 영역에 똑같이 float: left 를 사용 -> 모든 박스에 float: left 사용하게 됨
+2. float의 성질을 차단하는 clear: both; 를 사용 -> 어떤 영역이 깨졌는지 찾기 어려움
+3. float을 사용한 상위 박스한테 overflow: hidden 을 사용 -> 현재는 제일 많이 사용
+4. clearfix를 사용 -> 제일 좋은 방법
