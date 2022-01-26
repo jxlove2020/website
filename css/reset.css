@@ -1,6 +1,6 @@
 @charset "utf-8";
 
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&family=Noto+Sans+KR&display=swap');
 
 /* 여백 초기화 */
 body,
@@ -61,6 +61,17 @@ li,
 ol,
 menu {
   list-style-type: none;
+}
+
+/* 제목 태그 초기화 */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 13px;
+  color: #222;
 }
 
 /* IR 효과 */
