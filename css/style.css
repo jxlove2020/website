@@ -45,9 +45,7 @@
   background-color: #dceff7;
 }
 #cont_cont {
-  width: 100%;
-  height: 200px;
-  background: #666;
+  background-color: #f6fdff;
 }
 
 /* 컨테이너 */
@@ -238,4 +236,108 @@
 }
 .ban ul li img:hover {
   border-color: #98bcdc;
+}
+
+/* 컨텐츠 */
+.cont {
+  overflow: hidden;
+  padding-top: 30px;
+}
+.cont .column {
+  position: relative;
+  float: left;
+  width: 289px;
+  height: 363px;
+  margin: 0 30px 30px 0;
+  padding-right: 30px;
+}
+.cont .col1 {
+  border-right: 1px solid #ccc;
+}
+.cont .col2 {
+  border-right: 1px solid #ccc;
+}
+.cont .col3 {
+  margin-right: 0;
+  padding-right: 0;
+}
+.cont .col4 {
+  border-right: 1px solid #ccc;
+}
+.cont .col5 {
+  border-right: 1px solid #ccc;
+}
+.cont .col6 {
+  margin-right: 0;
+  padding-right: 0;
+}
+
+.cont .column .ico_img {
+  display: block;
+  width: 60px;
+  height: 60px;
+  background: url(../img/icon_sprite.png) no-repeat;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.cont .column .ico_tit {
+  padding-left: 70px;
+  font-size: 16px;
+  color: #2c94c4;
+}
+.cont .column .ico_desc {
+  padding-left: 70px;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 15px;
+  margin-bottom: 15px;
+}
+
+.cont .col1 .ico_img,
+.cont .col2 .ico_img,
+.cont .col3 .ico_img,
+.cont .col4 .ico_img,
+.cont .col5 .ico_img,
+.cont .col6 .ico_img {
+  background-position: 0px 0px;
+}
+.cont .col1 .ico_img:hover,
+.cont .col2 .ico_img:hover,
+.cont .col3 .ico_img:hover,
+.cont .col4 .ico_img:hover,
+.cont .col5 .ico_img:hover,
+.cont .col6 .ico_img:hover {
+  background-position: -60px 0px;
+}
+
+/* 게시판 */
+.notice {
+  position: relative;
+}
+.notice h4 {
+  font-size: 14px;
+  color: #0093bd;
+  padding-bottom: 3px;
+  font-weight: bold;
+}
+/* 두줄을 한줄로 표시, 줄임말 표시 */
+.notice ul li {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.notice ul li a {
+  font-size: 12px;
+}
+.notice a.more {
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: block;
+  background: url(../img/icon_sprite.png) -120px 0px;
+  width: 20px;
+  height: 20px;
+}
+.notice a.more:hover {
+  background: url(../img/icon_sprite.png) -140px 0px;
 }
