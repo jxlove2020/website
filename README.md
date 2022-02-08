@@ -3,9 +3,31 @@
 웹 접근성 향상을 위한 국가표준 기술 가이드라인  
 반복되는 링크를 건너뛸 수 있도록 건너뛰기 링크(Skip Navigation)를 제공해야 합니다.
 
-건너뛰기 링크는 웹 페이지 상단에서 반복되는 콘텐츠를 건너뛰는 것이므로,  
-건너뛰기 링크 이전에는 콘텐츠가 없어야 합니다.  
+스킵 내비게이션은 웹 페이지 상단에서 반복되는 콘텐츠를 건너뛰는 것이므로,  
+스킵 내비게이션 이전에는 콘텐츠가 없어야 합니다.  
 즉, <body>가 시작하고 바로 나오는 것이 가장 적절합니다.
+
+```css
+/* 스킵 내비게이션 */
+#skip {
+  position: relative;
+}
+#skip a {
+  position: absolute;
+  left: 0px;
+  top: -35px;
+  border: 1px solid #fff;
+  color: #fff;
+  background: #333;
+  line-height: 30px;
+  width: 140px;
+  text-align: center;
+}
+#skip a:active,
+#skip a:focus {
+  top: 0;
+}
+```
 
 # 이미지 표현 방법
 
@@ -13,6 +35,36 @@
 2. background 속성으로 표현 ( 의미가 없을 때 ) - 대체 문자 X
 3. 이미지를 background 속성 - 웹 표준 준수하기 위해서는 가상으로 대체 문자를 만들어 줌 ( IR 효과 )
    이미지 스프라이트 효과
+
+```css
+/* IR 효과 */
+/* 의미 있는 이미지의 대체 텍스트를 제공하는 경우 */
+.ir_pm {
+  display: block;
+  overflow: hidden;
+  font-size: 0;
+  line-height: 0;
+  text-indent: -9999px;
+}
+/* 의미 있는 이미지의 대체 텍스트로 이미지가 없어도 대체 텍스트를 보여주고자 할 때 */
+.ir_wa {
+  display: block;
+  overflow: hidden;
+  position: relative;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+}
+/* 대체 텍스트가 아닌 접근성을 위한 숨김 텍스트를 제공할 때 */
+.ir_su {
+  overflow: hidden;
+  position: absolute;
+  width: 0;
+  height: 0;
+  line-height: 0;
+  text-indent: -9999px;
+}
+```
 
 # float: left 로 인한 영역 깨짐 방지법
 
