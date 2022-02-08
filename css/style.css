@@ -380,3 +380,53 @@
   width: 20px;
   height: 20px;
 }
+.notice2 a.more:hover {
+  background: url(../img/icon_sprite.png) -140px 0px;
+}
+
+/* 게시판3 */
+.notice3 {
+  position: relative;
+}
+.notice3 h4 {
+  font-size: 14px;
+  color: #0093bd;
+  padding-bottom: 3px;
+  font-weight: bold;
+}
+.notice3 li {
+  position: relative;
+  padding: 8px 0 14px 60px;
+}
+.notice3 li a img {
+  width: 50px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  border: 1px solid #0093bd;
+}
+.notice3 li a strong {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.notice3 li a span {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 12px;
+}
+.notice2 a.more {
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: block;
+  background: url(../img/icon_sprite.png) -120px 0px;
+  width: 17px;
+  height: 17px;
+}
+.notice3 a.more:hover {
+  background: url(../img/icon_sprite.png) -140px 0px;
+}
