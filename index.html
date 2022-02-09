@@ -379,7 +379,7 @@
                         ><img src="https://picsum.photos/41" alt="광고 1"
                       /></a>
                     </li>
-                    <li>
+                    <li class="window">
                       <a href="#"
                         ><img src="https://picsum.photos/42" alt="광고 2"
                       /></a>
@@ -772,6 +772,18 @@
     ></script>
 
     <script type="text/javascript">
+      //윈도우 팝업
+      $('.window').click(function (e) {
+        e.preventDefault();
+        //window.open("파일명", "팝업이름", "옵션설정");
+        //옵션 : left, top, width, height, status, toolbar, location, menubar, scrollbars, fullscreen
+        window.open(
+          'sample_popup.html',
+          'popup01',
+          'width=800, height=385, left=50, top=50, scrollbars=0, toolbar=0, menubar=0'
+        );
+      });
+
       //레이어 팝업
       $('.layer').click(function (e) {
         e.preventDefault();
