@@ -72,3 +72,43 @@
 2. float의 성질을 차단하는 clear: both; 를 사용 -> 어떤 영역이 깨졌는지 찾기 어려움
 3. float을 사용한 상위 박스한테 overflow: hidden 을 사용 -> 현재는 제일 많이 사용
 4. clearfix를 사용 -> 제일 좋은 방법
+
+# jQuery 사용 (cdn 사용)
+
+```html
+<!-- jQuery 3.x -->
+<script
+  src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous"
+></script>
+<!-- jQuery 2.x -->
+<script
+  src="https://code.jquery.com/jquery-2.2.4.min.js"
+  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+  crossorigin="anonymous"
+></script>
+<!-- jQuery 1.x -->
+<script
+  src="https://code.jquery.com/jquery-1.12.4.min.js"
+  integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+  crossorigin="anonymous"
+></script>
+```
+
+# slick.js 사용 (cdn 사용)
+
+```html
+<!-- 슬릭 사이트 : http://kenwheeler.github.io/slick/ -->
+
+<link
+  rel="stylesheet"
+  type="text/css"
+  href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+/>
+
+<script
+  type="text/javascript"
+  src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+></script>
+```
