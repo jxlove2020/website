@@ -517,7 +517,7 @@
                     </li>
                     <li>
                       <a href="#">공지사항 2</a>
-                      <ul style="display: none">
+                      <ul>
                         <li>
                           <a href="#"
                             >두 번째 공지사항 탭 메뉴 테스트 목록 입니다.</a
@@ -537,7 +537,7 @@
                     </li>
                     <li>
                       <a href="#">공지사항 3</a>
-                      <ul style="display: none">
+                      <ul>
                         <li>
                           <a href="#"
                             >세 번째 공지사항 탭 메뉴 테스트 목록 입니다.</a
@@ -712,8 +712,30 @@
     ></script>
 
     <script type="text/javascript">
-      //배너
-      //html 마크업 셋팅 -> css 연동 -> 제이쿼리 연동 -> 제이쿼리 호출
+      // 탭 메뉴
+      const $tab_list = $('.tab_menu');
+      // 탭 메뉴 ul 의 ul 을 숨겨준다.
+      $tab_list.find('ul ul').hide();
+      $tab_list.find('li.active > ul').show();
+
+      function tabMenu(e) {
+        e.preventDefault();
+        const $this = $(this);
+        $this
+          .next('ul')
+          .show()
+          .parent('li')
+          .addClass('active')
+          .siblings('li')
+          .removeClass('active')
+          .find('>ul')
+          .hide();
+      }
+      // focus 를 줘서 탭 메뉴가 활성화 되면 웹 표준을 준수 할 수 있게 된다.
+      $tab_list.find('ul>li>a').click(tabMenu).focus(tabMenu);
+
+      // 배너
+      // html 마크업 셋팅 -> css 연동 -> 제이쿼리 연동 -> 제이쿼리 호출
       $('.ban').slick({
         infinite: true,
         slidesToShow: 3,
