@@ -374,7 +374,7 @@
                 <div class="popup">
                   <h4>Advertisement</h4>
                   <ul>
-                    <li>
+                    <li class="layer">
                       <a href="#"
                         ><img src="https://picsum.photos/41" alt="광고 1"
                       /></a>
@@ -755,7 +755,8 @@
 
     <!-- layer popup -->
     <div id="layer">
-      <div class="layer_content">TEXT</div>
+      <img src="img/scenery.jpg" alt="경치" />
+      <a href="#" class="close">Close</a>
     </div>
     <!-- // layer popup -->
 
@@ -771,6 +772,22 @@
     ></script>
 
     <script type="text/javascript">
+      //레이어 팝업
+      $('.layer').click(function (e) {
+        e.preventDefault();
+        //$("#layer").css("display","block");
+        //$("#layer").show();
+        //$("#layer").fadeIn();
+        $('#layer').slideDown();
+      });
+      $('#layer .close').click(function (e) {
+        e.preventDefault();
+        //$("#layer").css("display","none");
+        //$("#layer").hide();
+        //$("#layer").fadeOut();
+        $('#layer').slideUp();
+      });
+
       // 탭 메뉴
       const $tab_list = $('.tab_menu');
       // 탭 메뉴 ul 의 ul 을 숨겨준다.

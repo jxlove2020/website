@@ -911,3 +911,29 @@
 .footer .w3c {
   margin-top: 15px;
 }
+
+/* 레이어 팝업 */
+#layer {
+  display: none;
+  position: fixed;
+  left: 50px;
+  top: 50px;
+  width: 700px;
+  border: 10px solid #dceff7;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.4);
+}
+#layer img {
+  width: 100%;
+  display: block;
+}
+#layer .close {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  background: #0093bd;
+  padding: 1px 2px;
+  color: #fff;
+}
+#layer .close:hover {
+  text-decoration: underline;
+}
