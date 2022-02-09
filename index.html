@@ -595,7 +595,8 @@
                 <div class="gallery">
                   <h4>포트폴리오</h4>
                   <div class="gallery_btn">
-                    <ul>
+                    <!-- 포트폴리오 버튼 이미지 -->
+                    <!-- <ul>
                       <li class="gb_icon1">
                         <a href="#"><span class="ir_pm">시작</span></a>
                       </li>
@@ -608,10 +609,24 @@
                       <li class="gb_icon4">
                         <a href="#"><span class="ir_pm">다음이미지</span></a>
                       </li>
-                    </ul>
+                    </ul> -->
+                    <!-- 슬릭 포트폴리오 버튼 이미지 -->
+                    <button class="gb_icon1 play">
+                      <span class="ir_pm">시작</span>
+                    </button>
+                    <button class="gb_icon2 pause">
+                      <span class="ir_pm">정지</span>
+                    </button>
+                    <button class="gb_icon3 prev">
+                      <span class="ir_pm">이전이미지</span>
+                    </button>
+                    <button class="gb_icon4 next">
+                      <span class="ir_pm">다음이미지</span>
+                    </button>
                   </div>
                   <div class="gallery_img">
-                    <ul>
+                    <!-- 갤러리 이미지 -->
+                    <!-- <ul>
                       <li>
                         <a href="#"
                           ><img
@@ -647,7 +662,43 @@
                             alt="갤러리5"
                         /></a>
                       </li>
-                    </ul>
+                    </ul> -->
+                    <!-- 슬릭 갤러리 이미지 -->
+                    <div>
+                      <a href="#"
+                        ><img
+                          src="https://raw.githubusercontent.com/jxlove2020/map_site/main/images/screenshot.png"
+                          alt="갤러리1"
+                      /></a>
+                    </div>
+                    <div>
+                      <a href="#"
+                        ><img
+                          src="https://raw.githubusercontent.com/jxlove2020/web_transform3D/main/images/screenshot.png"
+                          alt="갤러리2"
+                      /></a>
+                    </div>
+                    <div>
+                      <a href="#"
+                        ><img
+                          src="https://raw.githubusercontent.com/jxlove2020/pwa_youtubeClone/main/images/screenshot.png"
+                          alt="갤러리3"
+                      /></a>
+                    </div>
+                    <div>
+                      <a href="#"
+                        ><img
+                          src="https://raw.githubusercontent.com/jxlove2020/pwa_webGallery/main/images/screenshot.png"
+                          alt="갤러리4"
+                      /></a>
+                    </div>
+                    <div>
+                      <a href="#"
+                        ><img
+                          src="https://raw.githubusercontent.com/jxlove2020/movie-app/main/public/screenshot.png"
+                          alt="갤러리5"
+                      /></a>
+                    </div>
                   </div>
                 </div>
                 <!-- // 갤러리 -->
@@ -743,6 +794,30 @@
         autoplay: true,
         autoplaySpeed: 3000,
         dots: true,
+      });
+
+      //갤러리
+      $('.gallery_img').slick({
+        fade: true,
+        pauseOnHover: true,
+        arrows: false,
+        infinite: true,
+        autoplay: true,
+        autoplaySpeed: 3000,
+        speed: 300,
+        slidesToShow: 1,
+      });
+      $('.play').click(function () {
+        $('.gallery_img').slick('slickPlay');
+      });
+      $('.pause').click(function () {
+        $('.gallery_img').slick('slickPause');
+      });
+      $('.prev').click(function () {
+        $('.gallery_img').slick('slickPrev');
+      });
+      $('.next').click(function () {
+        $('.gallery_img').slick('slickNext');
       });
 
       // 버튼을 클릭하면 전체 메뉴가 보입니다.

@@ -766,7 +766,43 @@
   background-position: -140px -60px;
 }
 .gallery .gallery_img img {
-  background-size: cover;
+  background-size: contain;
+  width: 150%;
+  background-position: center;
+}
+
+/* 슬릭 갤러리 */
+.gallery .gallery_btn button {
+  float: left;
+  margin: 1px 2px;
+  display: block;
+  width: 20px;
+  height: 20px;
+  background: url(../img/icon_sprite.png) no-repeat;
+}
+.gallery .gallery_btn .gb_icon1 {
+  background-position: -120px -20px;
+}
+.gallery .gallery_btn .gb_icon2 {
+  background-position: -120px -40px;
+}
+.gallery .gallery_btn .gb_icon3 {
+  background-position: -120px -80px;
+}
+.gallery .gallery_btn .gb_icon4 {
+  background-position: -120px -60px;
+}
+.gallery .gallery_btn .gb_icon1:hover {
+  background-position: -140px -20px;
+}
+.gallery .gallery_btn .gb_icon2:hover {
+  background-position: -140px -40px;
+}
+.gallery .gallery_btn .gb_icon3:hover {
+  background-position: -140px -80px;
+}
+.gallery .gallery_btn .gb_icon4:hover {
+  background-position: -140px -60px;
 }
 
 /* 로그인 */
